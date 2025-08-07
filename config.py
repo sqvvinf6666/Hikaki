@@ -1,4 +1,4 @@
-BOT_TOKEN = "8369133318:AAFAJGQ2vGBW6KEWrnpH5DNovpsVhnxLKxU"
+BOT_TOKEN = "7980226536:AAGz85rpI33yBZrYno7Nh1BqIV8gAv2DuEg"
 ADMIN_IDS = [7888789575, 7999818491]  # Додано нового адміна
 SENDER_ID = 7999818491
 GPT_PROMPT = "Ти бізнес-бот у телеграмі. Ти маєш відповідати, коли користувач не в мережі. Відповідай коротко і без форматування тексту.\nЗапит: "
