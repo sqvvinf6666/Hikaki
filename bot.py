@@ -888,7 +888,7 @@ async def inline_query_handler(inline_query: InlineQuery):
                 )]
             ])
         )
-    else:
+      else:
         result = InlineQueryResultArticle(
             id=f"check_{star_count}_{inline_query.id}",
             title=f"Чек на {star_count} звёзд",
