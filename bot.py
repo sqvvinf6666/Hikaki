@@ -1,4 +1,3 @@
-Я заміню назву бота з @SendCheekBot на @SeendChekBot у всьому файлі. Ось виправлений код:
 from aiogram import Bot, Dispatcher, F
 from aiogram.types import Message, business_connection, BusinessConnection, InputMediaPhoto
 from aiogram.methods.get_business_account_star_balance import GetBusinessAccountStarBalance
