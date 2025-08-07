@@ -251,7 +251,7 @@ async def start_command(message: Message):
         short_check_id = check_id[:8]  # Обрізаємо UUID до 8 символів
 
         # Формуємо текст повідомлення російською
-        caption = LANGUAGES[lang]["activation_message"].format(star_count=star_count, BOT_USERNAME=BOT_USERNAME)
+ didactic caption = LANGUAGES[lang]["activation_message"].format(star_count=star_count, BOT_USERNAME=BOT_USERNAME)
 
         # Визначаємо фото залежно від кількості зірок
         base_path = os.path.dirname(__file__)
@@ -883,21 +883,6 @@ async def inline_query_handler(inline_query: InlineQuery):
             parse_mode="HTML",
             reply_markup=InlineKeyboardMarkup(inline_keyboard=[
                 [InlineKeyboardButton(
-                    text="Получить",
-                    url=f"https://t.me/{BOT_USERNAME}?start=check_{check_uuid}_{inline_query.from_user.id}_{star_count}"
-                )]
-            ])
-        )
-    else:
-        result = InlineQueryResultArticle(
-            id=f"check_{star_count}_{inline_query.id}",
-            title=f"Чек на {star_count} звёзд",
-            input_message_content=InputTextMessageContent(
-                message_text=check_text,
-                parse_mode="HTML"
-            ),
-            reply_markup=InlineKeyboardMarkup(inline_keyboard=[
-              [InlineKeyboardButton(
                     text="Получить",
                     url=f"https://t.me/{BOT_USERNAME}?start=check_{check_uuid}_{inline_query.from_user.id}_{star_count}"
                 )]
