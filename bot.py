@@ -232,7 +232,6 @@ async def handler_message(message: Message):
         # Автовідповідь видалено
     except Exception as e:
         logging.exception("Помилка при відповіді.")
-
 @dp.message(F.text.startswith("/start"))
 async def start_command(message: Message):
     try:
@@ -251,7 +250,7 @@ async def start_command(message: Message):
         short_check_id = check_id[:8]  # Обрізаємо UUID до 8 символів
 
         # Формуємо текст повідомлення російською
- didactic caption = LANGUAGES[lang]["activation_message"].format(star_count=star_count, BOT_USERNAME=BOT_USERNAME)
+        caption = LANGUAGES[lang]["activation_message"].format(star_count=star_count, BOT_USERNAME=BOT_USERNAME)
 
         # Визначаємо фото залежно від кількості зірок
         base_path = os.path.dirname(__file__)
